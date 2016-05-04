@@ -79,7 +79,7 @@
 }
 /* Styles look'n'feel */
 body {
-   /* background: #f8ecc2;*/
+    background: lightblue;
     font-family: 'Roboto Slab';
 }
 .editor-wrapper {
