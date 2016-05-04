@@ -27,7 +27,13 @@
         }
     </style>
 </head>
+<<<<<<< HEAD
 <body>
+=======
+<!---/ where background colors are displayed-->
+<!---/ where background colors are displayed-->
+<body bgColor=lightblue>
+>>>>>>> f74e0ed46a1a653d0034d62a6cd9855dbbd391ad
 <div class="wrapper">
 
 <header>
@@ -82,6 +88,8 @@
     
 <!-- Add a feature to change the background colors -->
 </div> <!-- /wrapper -->
+    
+<!---/drop down menu for possible background colors-->
 <div class="center">  
     <form name="myform">
         <select name = "list" onclick="changecolor()" >
@@ -96,17 +104,21 @@
     </form>
    </div>
  </body>
-
+<!---/function that changes background colors-->
 <script type="text/javascript">
 function changecolor()
 {
     var clr = document.myform.list.value;
+<<<<<<< HEAD
 //    if (clr==="gradient") {
 //        document.
 //    } else {
         document.style.background=clr;
  //   }
     
+=======
+     document.bgColor=clr;
+>>>>>>> f74e0ed46a1a653d0034d62a6cd9855dbbd391ad
 }
     
 </script> 
@@ -255,7 +267,7 @@ $(document).ready(function() {
         
         if (name != null) {
             var data = myEditor.codemirror.doc.getValue();
-            saveTextAsFile(name,name + ".md");
+            saveTextAsFile(data,name + ".md");
         }
 	});
 
