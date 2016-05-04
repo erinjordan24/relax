@@ -81,20 +81,21 @@
 	</div>
 </section>
 
-    
-<!-- Add a feature to change the background colors -->
 </div> <!-- /wrapper -->
     
+
+<!-- Add a feature to change the background colors -->
 <!---/drop down menu for possible background colors-->
 <div class="center">  
     <form name="myform">
         <select name = "list" onclick="changecolor()" >
             
-            <option value = "lightblue"> Focus Blue </option>]
+            <option value = "lightblue"> Focus Blue </option>
             <option value = "#ffe44d"> Creative Yellow </option>
             <option value = "#ff3333"> Passion Red </option>
             <option value = "#66ff33"> Go Green </option>
             <option value = "gradient"> Ocean Blue </option>
+            <option value = "gradient"> Ocean Blue2 </option>
             
         </select>
     </form>
@@ -105,10 +106,12 @@
 function changecolor()
 {
     var clr = document.myform.list.value;
+    
     if (clr === "gradient") {
         document.body.style.background =
 		"-webkit-linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), -webkit-linear-gradient(315deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), -webkit-linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), -webkit-linear-gradient(135deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
         document.body.style.background = "linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), linear-gradient(135deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), linear-gradient(315deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
+        
     } else {
         document.body.style.background = clr;
     }
