@@ -105,3 +105,12 @@ body {
 .notes a {
   text-decoration: underline;
 }
+
+.center select {
+    color: grey;
+    border: 1px solid white;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    opacity: 0.95;
+    margin-top: 7px;
+}
