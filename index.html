@@ -92,6 +92,7 @@
                     <option value = "gradient"> Ocean Blue </option>
                     <option value = "gradient2"> Zen Green </option>
                     <option value = "gradient3"> Candy Red </option>
+                    <option value = "gradient4"> Thoughtful Grey </option>
             
                         </select>
                     </form>
@@ -143,6 +144,11 @@ function changecolor()
         
         document.body.style.background = "-webkit-linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), -webkit-linear-gradient(315deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), -webkit-linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), -webkit-linear-gradient(135deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
 	    document.body.style.background = "linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), linear-gradient(135deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), linear-gradient(315deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
+        
+    } else if (clr === "gradient4") {
+        
+        document.body.style.background = "-webkit-linear-gradient(45deg, hsla(209, 16%, 33%, 1) 0%, hsla(209, 16%, 33%, 0) 70%), -webkit-linear-gradient(315deg, hsla(349, 32%, 63%, 1) 10%, hsla(349, 32%, 63%, 0) 80%), -webkit-linear-gradient(225deg, hsla(222, 0%, 67%, 1) 10%, hsla(222, 0%, 67%, 0) 80%), -webkit-linear-gradient(135deg, hsla(40, 72%, 7%, 1) 100%, hsla(40, 72%, 7%, 0) 70%)";
+        document.body.style.background = "linear-gradient(45deg, hsla(209, 16%, 33%, 1) 0%, hsla(209, 16%, 33%, 0) 70%), linear-gradient(135deg, hsla(349, 32%, 63%, 1) 10%, hsla(349, 32%, 63%, 0) 80%), linear-gradient(225deg, hsla(222, 0%, 67%, 1) 10%, hsla(222, 0%, 67%, 0) 80%), linear-gradient(315deg, hsla(40, 72%, 7%, 1) 100%, hsla(40, 72%, 7%, 0) 70%)";
         
     } else {
         document.body.style.background = clr;
