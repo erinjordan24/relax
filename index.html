@@ -111,7 +111,6 @@
 
 </div> <!-- /wrapper -->
     
-    
  </body>
     
 
@@ -130,27 +129,33 @@ function changecolor()
     var clr = document.myform.list.value;
     
     if (clr === "gradient") {
+        // change the background color to Ocean Blue
         
         document.body.style.background =
 		"-webkit-linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), -webkit-linear-gradient(315deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), -webkit-linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), -webkit-linear-gradient(135deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
         document.body.style.background = "linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), linear-gradient(135deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), linear-gradient(315deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
         
     } else if (clr === "gradient2") {
+        // change the background color to Zen Green 
         
         document.body.style.background = "-webkit-linear-gradient(45deg, hsla(72, 96%, 42%, 1) 0%, hsla(72, 96%, 42%, 0) 70%), -webkit-linear-gradient(315deg, hsla(134, 87%, 41%, 1) 10%, hsla(134, 87%, 41%, 0) 80%), -webkit-linear-gradient(225deg, hsla(148, 100%, 35%, 1) 10%, hsla(148, 100%, 35%, 0) 80%), -webkit-linear-gradient(135deg, hsla(158, 96%, 41%, 1) 100%, hsla(158, 96%, 41%, 0) 70%)";
         document.body.style.background = "linear-gradient(45deg, hsla(72, 96%, 42%, 1) 0%, hsla(72, 96%, 42%, 0) 70%), linear-gradient(135deg, hsla(134, 87%, 41%, 1) 10%, hsla(134, 87%, 41%, 0) 80%), linear-gradient(225deg, hsla(148, 100%, 35%, 1) 10%, hsla(148, 100%, 35%, 0) 80%), linear-gradient(315deg, hsla(158, 96%, 41%, 1) 100%, hsla(158, 96%, 41%, 0) 70%)";
         
     } else if (clr === "gradient3") {
+        // change the background color to Candy Red
         
         document.body.style.background = "-webkit-linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), -webkit-linear-gradient(315deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), -webkit-linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), -webkit-linear-gradient(135deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
 	    document.body.style.background = "linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), linear-gradient(135deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), linear-gradient(315deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
         
     } else if (clr === "gradient4") {
+        // change the background color to Thoughtful Grey
         
         document.body.style.background = "-webkit-linear-gradient(45deg, hsla(209, 16%, 33%, 1) 0%, hsla(209, 16%, 33%, 0) 70%), -webkit-linear-gradient(315deg, hsla(349, 32%, 63%, 1) 10%, hsla(349, 32%, 63%, 0) 80%), -webkit-linear-gradient(225deg, hsla(222, 0%, 67%, 1) 10%, hsla(222, 0%, 67%, 0) 80%), -webkit-linear-gradient(135deg, hsla(40, 72%, 7%, 1) 100%, hsla(40, 72%, 7%, 0) 70%)";
         document.body.style.background = "linear-gradient(45deg, hsla(209, 16%, 33%, 1) 0%, hsla(209, 16%, 33%, 0) 70%), linear-gradient(135deg, hsla(349, 32%, 63%, 1) 10%, hsla(349, 32%, 63%, 0) 80%), linear-gradient(225deg, hsla(222, 0%, 67%, 1) 10%, hsla(222, 0%, 67%, 0) 80%), linear-gradient(315deg, hsla(40, 72%, 7%, 1) 100%, hsla(40, 72%, 7%, 0) 70%)";
         
     } else {
+        // Focus Blue, Creative Yellow, Passion Red, or Go Green
+        
         document.body.style.background = clr;
     }
 
