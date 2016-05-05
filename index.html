@@ -20,7 +20,8 @@
     <style>
         #drop_zone {
             background: white;
-            opacity: 0.95;
+            opacity: 0.7;
+            color: dimgrey;
             min-height: auto;
             width: auto;
             border: 0.5px solid white;
@@ -89,6 +90,8 @@
                     <option value = "#ff3333"> Passion Red </option>
                     <option value = "#66ff33"> Go Green </option>
                     <option value = "gradient"> Ocean Blue </option>
+                    <option value = "gradient2"> Zen Green </option>
+                    <option value = "gradient3"> Candy Red </option>
             
                         </select>
                     </form>
@@ -126,9 +129,20 @@ function changecolor()
     var clr = document.myform.list.value;
     
     if (clr === "gradient") {
+        
         document.body.style.background =
 		"-webkit-linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), -webkit-linear-gradient(315deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), -webkit-linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), -webkit-linear-gradient(135deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
         document.body.style.background = "linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), linear-gradient(135deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), linear-gradient(315deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
+        
+    } else if (clr === "gradient2") {
+        
+        document.body.style.background = "-webkit-linear-gradient(45deg, hsla(72, 96%, 42%, 1) 0%, hsla(72, 96%, 42%, 0) 70%), -webkit-linear-gradient(315deg, hsla(134, 87%, 41%, 1) 10%, hsla(134, 87%, 41%, 0) 80%), -webkit-linear-gradient(225deg, hsla(148, 100%, 35%, 1) 10%, hsla(148, 100%, 35%, 0) 80%), -webkit-linear-gradient(135deg, hsla(158, 96%, 41%, 1) 100%, hsla(158, 96%, 41%, 0) 70%)";
+        document.body.style.background = "linear-gradient(45deg, hsla(72, 96%, 42%, 1) 0%, hsla(72, 96%, 42%, 0) 70%), linear-gradient(135deg, hsla(134, 87%, 41%, 1) 10%, hsla(134, 87%, 41%, 0) 80%), linear-gradient(225deg, hsla(148, 100%, 35%, 1) 10%, hsla(148, 100%, 35%, 0) 80%), linear-gradient(315deg, hsla(158, 96%, 41%, 1) 100%, hsla(158, 96%, 41%, 0) 70%)";
+        
+    } else if (clr === "gradient3") {
+        
+        document.body.style.background = "-webkit-linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), -webkit-linear-gradient(315deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), -webkit-linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), -webkit-linear-gradient(135deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
+	    document.body.style.background = "linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), linear-gradient(135deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), linear-gradient(315deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
         
     } else {
         document.body.style.background = clr;
