@@ -57,6 +57,8 @@
 		<div class="fg2 sidebar">
 			<div id="soundlinks"></div>
 			<hr>
+            
+            <!-- Toolbasr -->
 			<div class="toolbar">
 				<p id="btn-save-wrapper"><a id="btn-save" href="#"><i class="glyphicon glyphicon-save"></i> Save as...</a></p>
                 <p id="document-list"></p>
@@ -71,6 +73,24 @@
                     </output>
                 </div>
                 
+            
+                <!-- Add a feature to change the background colors -->
+                <div class="center">  
+    
+                    <!---/drop down menu for possible background colors-->
+                    <form name="myform">
+                        <select name = "list" onclick="changecolor()" >
+            
+                    <option value = "lightblue"> Focus Blue </option>
+                    <option value = "#ffe44d"> Creative Yellow </option>
+                    <option value = "#ff3333"> Passion Red </option>
+                    <option value = "#66ff33"> Go Green </option>
+                    <option value = "gradient"> Ocean Blue </option>
+            
+                        </select>
+                    </form>
+                </div>
+                
 				
 			</div>
 			<hr>
@@ -78,29 +98,24 @@
 		</div>
 
 	</div>
+        
 	</div>
 </section>
 
 </div> <!-- /wrapper -->
     
-
-<!-- Add a feature to change the background colors -->
-<!---/drop down menu for possible background colors-->
-<div class="center">  
-    <form name="myform">
-        <select name = "list" onclick="changecolor()" >
-            
-            <option value = "lightblue"> Focus Blue </option>
-            <option value = "#ffe44d"> Creative Yellow </option>
-            <option value = "#ff3333"> Passion Red </option>
-            <option value = "#66ff33"> Go Green </option>
-            <option value = "gradient"> Ocean Blue </option>
-            <option value = "gradient"> Ocean Blue2 </option>
-            
-        </select>
-    </form>
-   </div>
+    
  </body>
+    
+
+
+<script type="text/javascript" src="vendor/js/jquery.min.js"></script>
+<script type="text/javascript" src="vendor/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="vendor/js/marked.min.js"></script>
+<script type="text/javascript" src="vendor/js/codemirror.min.js"></script>
+<script type="text/javascript" src="vendor/js/intro.min.js"></script>
+<script type="text/javascript" src="vendor/js/editor.min.js"></script>
+<script src="static/js/load.min.js"></script>
 <!---/function that changes background colors-->
 <script type="text/javascript">
 function changecolor()
@@ -117,19 +132,7 @@ function changecolor()
     }
 //     document.bgColor=clr;
 }
-    
 </script> 
-
-
-
-
-<script type="text/javascript" src="vendor/js/jquery.min.js"></script>
-<script type="text/javascript" src="vendor/js/jquery.jplayer.min.js"></script>
-<script type="text/javascript" src="vendor/js/marked.min.js"></script>
-<script type="text/javascript" src="vendor/js/codemirror.min.js"></script>
-<script type="text/javascript" src="vendor/js/intro.min.js"></script>
-<script type="text/javascript" src="vendor/js/editor.min.js"></script>
-<script src="static/js/load.min.js"></script>
 <script type="text/javascript">
 
 if (!String.prototype.startsWith) {
