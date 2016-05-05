@@ -1,5 +1,5 @@
 {
-    "rain": {"label": "Rain", "class": "meteo-icon", "data": "R", "volume": 20},
+    /*"rain": {"label": "Rain", "class": "meteo-icon", "data": "R", "volume": 20},
     "storm": {"label": "Storm", "class": "meteo-icon", "data": "O"},
     "storm-with-rain": {"label": "Storm with rain", "class": "meteo-icon", "data": "O"},
     "summer-night": {"label": "Summer night", "class": "meteo-icon", "data": "C"},
@@ -8,5 +8,5 @@
     "seaside": {"label": "Seaside", "class": "fontello fontello-icon-sun", "volume": 50},
     "fire": {"label": "Fire", "class": "fontello fontello-icon-fire", "volume": 80},
     "water-stream": {"label": "Water stream", "class":"fontello fontello-icon-stream", "volume": 40},
-    "garden": {"label": "Garden, birds", "class": "fontello fontello-icon-garden"}
+    "garden": {"label": "Garden, birds", "class": "fontello fontello-icon-garden"}*/
 }
