@@ -115,3 +115,40 @@ body {
     opacity: 0.95;
     margin-top: 7px;
 }
+
+/*
+.shreya p {
+    color: red;
+}
+
+.shreya button {
+    border-radius:4px;
+    color: red;
+}
+*/
+/*
+.button {
+ display: block;
+ height: 100px;
+ width: 300px;
+ background: #34696f;
+ border: 2px solid rgba(33, 68, 72, 0.59);
+  color: #900;
+  font-weight: bold;
+}*/
+.sounds button{
+    
+}
+/*
+.fire h1{
+    padding-bottom: 3px;
+    padding-top: 3px;
+    margin-bottom: 3px;
+    
+}
+*/
+/*
+.fire {
+    padding:none;
+}
+*/
