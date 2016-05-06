@@ -31,143 +31,98 @@
         }
     </style>
 </head>
+    
+    
 <body>
-<!---/ where background colors are displayed-->
-<!--<body bgColor=lightblue>-->
+<!--- where background colors are displayed-->
 <div class="wrapper">
 
-<header>
-	<div class="center">
-		<div class="row">
-			<div class="fg12 title-container">
-				<h1>Relax...</h1>
-			</div>
-		</div>
-	</div>
-</header>
+    <header>
+        <div class="center">
+            <div class="row">
+                <div class="fg12 title-container">
+                    <h1>Relax...</h1>
+                </div>
+            </div>
+        </div>
+    </header>
 
 <section>
+    
 	<div class="center">
-	<div class="row">
+        
+	   <div class="row">
 
-		<div class="fg10">
-			<div class="editor-wrapper">
-				<form action="" id="editor">
-				<textarea placeholder="Please relax and type away..."></textarea>
-				</form>
-			</div>
-		</div>
+            <div class="fg10">
+                <div class="editor-wrapper">
+                    <form action="" id="editor">
+                    <textarea placeholder="Please relax and type away..."></textarea>
+                    </form>
+                </div>
+            </div>
 
-		<div class="fg2 sidebar">
-			<div id="soundlinks"></div>
+    <div class="fg2 sidebar">
             
+            <!-- commented out to allow for volume buttons -->
+            <!-- <div id="soundlinks"></div> -->
+            
+            <div>
                 <div>
-                <div>
-                <p style="margin:2px">Fire</p>
-                <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay() class="bt" id="Image" width ="37" height="37"/>
-                <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume() class="bt" width="37" height="37"/>
-                <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume() class="bt" width="37" height="37"/>
-<!--
-                <button id="button1" onclick="setHalfVolume()"type="button">-</button>
-                <button onclick="setFullVolume()" type="button">+</button><br>
-                <button type="button" onclick="setPlay()">PLAY</button>
-				<button type="button" onclick="setPause()">STOP</button>
--->
-                <p style="margin:2px">Harry Potter</p>
-                <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay2() class="bt" id="Image2" width="37" height="37"/>
-                <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume2() class="bt" width="37" height="37"/>
-                <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume2() class="bt" width="37" height="37"/>
-<!--
-                <button onclick="setHalfVolume2()" type="button">-</button>
-                <button onclick="setFullVolume2()" type="button">+</button><br>
-                <button type="button" onclick="setPlay2()">PLAY</button>
-				<button type="button" onclick="setPause2()">STOP</button>
--->
-                <p style="margin:2px">Garden</p>
-                <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay3() class="bt" id="Image3" width="37" height="37"/>
-                <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume3() class="bt" width="37" height="37"/>
-                <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume3() class="bt" width="37" height="37"/>
-<!--
-                <button onclick="setHalfVolume3()" type="button">-</button>
-                <button onclick="setFullVolume3()" type="button">+</button><br>
-                <button type="button" onclick="setPlay3()">PLAY</button>
-				<button type="button" onclick="setPause3()">STOP</button>
--->
-                <p style="margin:2px">Rain</p>
-                <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay4() class="bt" id="Image4" width="37" height="37"/>
-                <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume4() class="bt" width="37" height="37"/>
-                <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume4() class="bt" width="37" height="37"/>
-<!--
-                <button onclick="setHalfVolume4()" type="button">-</button>
-                <button onclick="setFullVolume4()" type="button">+</button><br>
-                <button type="button" onclick="setPlay4()">PLAY</button>
-				<button type="button" onclick="setPause4()">STOP</button>
--->
-                <p style="margin:2px">Seaside</p>
-                <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay5() class="bt" id="Image5" width="37" height="37"/>
-                <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume5() class="bt" width="37" height="37"/>
-                <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume5() class="bt" width="37" height="37"/>
-<!--
-                <button onclick="setHalfVolume5()" type="button">-</button>
-                <button onclick="setFullVolume5()" type="button">+</button><br>
-                <button type="button" onclick="setPlay5()">PLAY</button>
-				<button type="button" onclick="setPause5()">STOP</button>
--->
-                <p style="margin:2px">Storm</p>
-                <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay6() class="bt" id="Image6" width="37" height="37"/>
-                <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume6() class="bt" width="37" height="37"/>
-                <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume6() class="bt" width="37" height="37"/>
-<!--
-                <button onclick="setHalfVolume6()" type="button">-</button>
-                <button onclick="setFullVolume6()" type="button">+</button><br>
-                <button type="button" onclick="setPlay6()">PLAY</button>
-				<button type="button" onclick="setPause6()">STOP</button>
--->
-                <p style="margin:2px">Storm and Rain</p>
-                <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay7() class="bt" id="Image7" width="37" height="37"/>
-                <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume7() class="bt" width="37" height="37"/>
-                <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume7() class="bt" width="37" height="37"/>
-<!--
-                <button onclick="setHalfVolume7()" type="button">-</button>
-                <button onclick="setFullVolume7()" type="button">+</button><br>
-                <button type="button" onclick="setPlay7()">PLAY</button>
-				<button type="button" onclick="setPause7()">STOP</button>
--->
-                <p style="margin:2px">Summer Night</p>
-                <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay8() class="bt" id="Image8" width="37" height="37"/>
-                <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume8() class="bt" width="37" height="37"/>
-                <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume8() class="bt" width="37" height="37"/>
-<!--
-                <button onclick="setHalfVolume8()" type="button">-</button>
-                <button onclick="setFullVolume8()" type="button">+</button><br>
-                <button type="button" onclick="setPlay8()">PLAY</button>
-				<button type="button" onclick="setPause8()">STOP</button>
--->
-                <p style="margin:2px">Water Stream</p>
-                <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay9() class="bt" id="Image9" width="37" height="37"/>
-                <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume9() class="bt" width="37" height="37"/>
-                <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume9() class="bt" width="37" height="37"/>
-<!--
-                <button onclick="setHalfVolume9()" type="button">-</button>
-                <button onclick="setFullVolume9()" type="button">+</button><br>
-                <button type="button" onclick="setPlay9()">PLAY</button>
-				<button type="button" onclick="setPause9()">STOP</button>
--->
-                <p style="margin:2px">Wind</p>
-                <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay10() class="bt" id="Image10" width="37" height="37"/>
-                <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume10() class="bt" width="37" height="37"/>
-                <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume10() class="bt" width="37" height="37"/>
-                    </div>
-<!--
-                <button onclick="setHalfVolume10()" type="button">-</button>
-                <button onclick="setFullVolume10()" type="button">+</button><br>
-                <button type="button" onclick="setPlay10()">PLAY</button>
-				<button type="button" onclick="setPause10()">STOP</button>
-                 </div>
--->
+                    
+                    <!-- This div allows for the volume of each sound to be customized -->
+                    
+                    <p style="margin:2px">Fire</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay() class="bt" id="Image" width ="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume() class="bt" width="30" height="30"/>
+  
+                    <p style="margin:2px">Harry Potter</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay2() class="bt" id="Image2" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume2() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume2() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Garden</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay3() class="bt" id="Image3" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume3() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume3() class="bt" width="30" height="30"/>
+ 
+                    <p style="margin:2px">Rain</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay4() class="bt" id="Image4" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume4() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume4() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Seaside</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay5() class="bt" id="Image5" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume5() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume5() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Storm</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay6() class="bt" id="Image6" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume6() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume6() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Storm and Rain</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay7() class="bt" id="Image7" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume7() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume7() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Summer Night</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay8() class="bt" id="Image8" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume8() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume8() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Water Stream</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay9() class="bt" id="Image9" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume9() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume9() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Wind</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay10() class="bt" id="Image10" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume10() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume10() class="bt" width="30" height="30"/>
+            </div>
                 
-                
-                <div id="audio_player">
+            <div id="audio_player">
                 <audio id="myVideo" loop>
                 <!-- width="320" height="176" controls loop>  -->
                 	 <source src="fire.mp3" type="audio/mp3">
@@ -229,202 +184,8 @@
                 Your browser does not support HTML5 video.
                 </audio>
                 </div>
-<!--
-				<button type="button" onclick="setPlay()">PLAY</button>
-				<button type="button" onclick="setPause()">STOP</button>
-                <button type="button" onclick="setPlay2()">PLAY</button>
-				<button type="button" onclick="setPause2()">STOP</button>
--->
-				</div>
-				<start>
 
-<!--				 //</script>-->
-                 <script>
-                 //var vid=new Audio("fire.mp3");
-                 var vid = document.getElementById("myVideo");
-//                 var seekslider=document.getElementbyId("seekslider");
-//                 seekslider.addEventListener("change",setVolume,false);
-                 //vid.volume=100;
-                 var vid2=document.getElementById("myVideo2");
-                 var vid3=document.getElementById("myVideo3");
-                 var vid4=document.getElementById("myVideo4");
-                 var vid5=document.getElementById("myVideo5");
-                 var vid6=document.getElementById("myVideo6");
-                 var vid7=document.getElementById("myVideo7");
-                 var vid8=document.getElementById("myVideo8");
-                 var vid9=document.getElementById("myVideo9");
-                 var vid10=document.getElementById("myVideo10");
-                 function setVolume(){
-                 	vid.volume=seekslider.volume/100;
-                 }
-                 function setColor(btn){
-                     var property=document.getElementById("button1");
-                     property.style.backgroundColor="7FFF00"
-                 }
-                 function setHalfVolume(){
-                 	vid.volume-=.1;
-                 }
-                 function setFullVolume(){
-                 	vid.volume+=.1;
-                 }
-                 function setPlay(){
-                 	//var myAudio=document.getElementById("myVideo");
-                     var image=document.getElementById('Image');
-                     if (vid.paused==true){
-                         vid.play();
-                         image.src="volume-knob-stop.png";
-                     }
-                     else{
-                         vid.pause();
-                         image.src="volume-knob-play.png";
-                     }
-                 	//vid.play();
-                 	// vid.autoplay();
-                 }
-                 function setPause(){
-                    vid.pause();
-                 }
-                function setHalfVolume2(){
-                    vid2.volume-=.1;
-                 }
-                 function setFullVolume2(){
-                    vid2.volume+=.1;
-                 }
-                 function setPlay2(){
-                 	//var myAudio=document.getElementById("myVideo");
-                    var image=document.getElementById('Image2');
-                     if (vid2.paused==true){
-                         vid2.play();
-                         image.src="volume-knob-stop.png";
-                     }
-                     else{
-                         vid2.pause();
-                         image.src="volume-knob-play.png";
-                     }
-                 	
-                 	// vid.autoplay();
-                 }
-                 function setPause2(){
-                 	//var myAudio=document.getElementById("myVideo");;
-                    vid2.pause();
-                 }
-                function setHalfVolume3(){
-                    vid3.volume-=.1;
-                 }
-                 function setFullVolume3(){
-                    vid3.volume+=.1;
-                 }
-                 function setPlay3(){
-                 	//var myAudio=document.getElementById("myVideo");
-                                         var image=document.getElementById('Image3');
-                     if (vid3.paused==true){
-                         vid3.play();
-                         image.src="volume-knob-stop.png";
-                     }
-                     else{
-                         vid3.pause();
-                         image.src="volume-knob-play.png";
-                     }
-//                    vid3.play();
-//                 	
-                 	// vid.autoplay();
-                 }
-                 function setPause3(){vid3.pause();}
-                 function setHalfVolume4(){vid4.volume-=.1;}
-                 function setFullVolume4(){vid4.volume+=.1;}
-                 function setPlay4(){                    var image=document.getElementById('Image4');
-                     if (vid4.paused==true){
-                         vid4.play();
-                         image.src="volume-knob-stop.png";
-                     }
-                     else{
-                         vid4.pause();
-                         image.src="volume-knob-play.png";
-                     }}
-                 function setPause4(){vid4.pause();}
-                 function setHalfVolume5(){vid5.volume-=.1;}
-                 function setFullVolume5(){vid5.volume+=.1;}
-                 function setPlay5(){                    var image=document.getElementById('Image5');
-                     if (vid5.paused==true){
-                         vid5.play();
-                         image.src="volume-knob-stop.png";
-                     }
-                     else{
-                         vid5.pause();
-                         image.src="volume-knob-play.png";
-                     }}
-                 function setPause5(){vid5.pause();}
-                 function setHalfVolume6(){vid6.volume-=.1;}
-                 function setFullVolume6(){vid6.volume+=.1;}
-                 function setPlay6(){                    var image=document.getElementById('Image6');
-                     if (vid6.paused==true){
-                         vid6.play();
-                         image.src="volume-knob-stop.png";
-                     }
-                     else{
-                         vid6.pause();
-                         image.src="volume-knob-play.png";
-                     }}
-                 function setPause6(){vid6.pause();}
-                 function setHalfVolume7(){vid7.volume-=.1;}
-                 function setFullVolume7(){vid7.volume+=.1;}
-                 function setPlay7(){                    var image=document.getElementById('Image7');
-                     if (vid7.paused==true){
-                         vid7.play();
-                         image.src="volume-knob-stop.png";
-                     }
-                     else{
-                         vid7.pause();
-                         image.src="volume-knob-play.png";
-                     }}
-                 function setPause7(){vid7.pause();}
-                 function setHalfVolume8(){vid8.volume-=.1;}
-                 function setFullVolume8(){vid8.volume+=.1;}
-                 function setPlay8(){                    var image=document.getElementById('Image8');
-                     if (vid8.paused==true){
-                         vid8.play();
-                         image.src="volume-knob-stop.png";
-                     }
-                     else{
-                         vid8.pause();
-                         image.src="volume-knob-play.png";
-                     }}
-                 function setPause8(){vid8.pause();}
-                 function setHalfVolume9(){vid9.volume-=.1;}
-                 function setFullVolume9(){vid9.volume+=.1;}
-                 function setPlay9(){                    var image=document.getElementById('Image9');
-                     if (vid9.paused==true){
-                         vid9.play();
-                         image.src="volume-knob-stop.png";
-                     }
-                     else{
-                         vid9.pause();
-                         image.src="volume-knob-play.png";
-                     }}
-                 function setPause9(){vid9.pause();}
-                 function setHalfVolume10(){vid10.volume-=.1;}
-                 function setFullVolume10(){vid10.volume+=.1;}
-                 function setPlay10(){                    var image=document.getElementById('Image10');
-                     if (vid10.paused==true){
-                         vid10.play();
-                         image.src="volume-knob-stop.png";
-                     }
-                     else{
-                         vid10.pause();
-                         image.src="volume-knob-play.png";
-                     }}
-                 function setPause10(){vid10.pause();}
-                    
-                 
-
-
-                 // <a onclick="vid.play()" class="button">
-                 //     <audio src="fire.mp3">
-                 //     </audio>
-                 // </a>
-                 //function 
-                 </script>
-
+            </div>
 
 			<hr>
             
@@ -478,7 +239,6 @@
 
 </div> <!-- /wrapper -->
     
-    
  </body>
     
 
@@ -497,32 +257,207 @@ function changecolor()
     var clr = document.myform.list.value;
     
     if (clr === "gradient") {
+        // change the background color to Ocean Blue
         
         document.body.style.background =
 		"-webkit-linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), -webkit-linear-gradient(315deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), -webkit-linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), -webkit-linear-gradient(135deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
         document.body.style.background = "linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), linear-gradient(135deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), linear-gradient(315deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
         
     } else if (clr === "gradient2") {
+        // change the background color to Zen Green 
         
         document.body.style.background = "-webkit-linear-gradient(45deg, hsla(72, 96%, 42%, 1) 0%, hsla(72, 96%, 42%, 0) 70%), -webkit-linear-gradient(315deg, hsla(134, 87%, 41%, 1) 10%, hsla(134, 87%, 41%, 0) 80%), -webkit-linear-gradient(225deg, hsla(148, 100%, 35%, 1) 10%, hsla(148, 100%, 35%, 0) 80%), -webkit-linear-gradient(135deg, hsla(158, 96%, 41%, 1) 100%, hsla(158, 96%, 41%, 0) 70%)";
         document.body.style.background = "linear-gradient(45deg, hsla(72, 96%, 42%, 1) 0%, hsla(72, 96%, 42%, 0) 70%), linear-gradient(135deg, hsla(134, 87%, 41%, 1) 10%, hsla(134, 87%, 41%, 0) 80%), linear-gradient(225deg, hsla(148, 100%, 35%, 1) 10%, hsla(148, 100%, 35%, 0) 80%), linear-gradient(315deg, hsla(158, 96%, 41%, 1) 100%, hsla(158, 96%, 41%, 0) 70%)";
         
     } else if (clr === "gradient3") {
+        // change the background color to Candy Red
         
         document.body.style.background = "-webkit-linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), -webkit-linear-gradient(315deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), -webkit-linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), -webkit-linear-gradient(135deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
 	    document.body.style.background = "linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), linear-gradient(135deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), linear-gradient(315deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
         
     } else if (clr === "gradient4") {
+        // change the background color to Thoughtful Grey
         
         document.body.style.background = "-webkit-linear-gradient(45deg, hsla(209, 16%, 33%, 1) 0%, hsla(209, 16%, 33%, 0) 70%), -webkit-linear-gradient(315deg, hsla(349, 32%, 63%, 1) 10%, hsla(349, 32%, 63%, 0) 80%), -webkit-linear-gradient(225deg, hsla(222, 0%, 67%, 1) 10%, hsla(222, 0%, 67%, 0) 80%), -webkit-linear-gradient(135deg, hsla(40, 72%, 7%, 1) 100%, hsla(40, 72%, 7%, 0) 70%)";
         document.body.style.background = "linear-gradient(45deg, hsla(209, 16%, 33%, 1) 0%, hsla(209, 16%, 33%, 0) 70%), linear-gradient(135deg, hsla(349, 32%, 63%, 1) 10%, hsla(349, 32%, 63%, 0) 80%), linear-gradient(225deg, hsla(222, 0%, 67%, 1) 10%, hsla(222, 0%, 67%, 0) 80%), linear-gradient(315deg, hsla(40, 72%, 7%, 1) 100%, hsla(40, 72%, 7%, 0) 70%)";
         
     } else {
+        // Focus Blue, Creative Yellow, Passion Red, or Go Green
+        
         document.body.style.background = clr;
     }
 
 }
 </script> 
+<start>
+<script>
+     var vid = document.getElementById("myVideo");
+     var vid2=document.getElementById("myVideo2");
+     var vid3=document.getElementById("myVideo3");
+     var vid4=document.getElementById("myVideo4");
+     var vid5=document.getElementById("myVideo5");
+     var vid6=document.getElementById("myVideo6");
+     var vid7=document.getElementById("myVideo7");
+     var vid8=document.getElementById("myVideo8");
+     var vid9=document.getElementById("myVideo9");
+     var vid10=document.getElementById("myVideo10");
+     function setVolume(){
+        vid.volume=seekslider.volume/100;
+     }
+     function setColor(btn){
+         var property=document.getElementById("button1");
+         property.style.backgroundColor="7FFF00"
+     }
+     function setHalfVolume(){
+        vid.volume-=.1;
+     }
+     function setFullVolume(){
+        vid.volume+=.1;
+     }
+     function setPlay(){
+
+         var image=document.getElementById('Image');
+         if (vid.paused==true){
+             vid.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid.pause();
+             image.src="volume-knob-play.png";
+         }
+
+     }
+     function setPause(){
+        vid.pause();
+     }
+    function setHalfVolume2(){
+        vid2.volume-=.1;
+     }
+     function setFullVolume2(){
+        vid2.volume+=.1;
+     }
+     function setPlay2(){
+
+        var image=document.getElementById('Image2');
+         if (vid2.paused==true){
+             vid2.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid2.pause();
+             image.src="volume-knob-play.png";
+         }
+
+     }
+     function setPause2(){
+        vid2.pause();
+     }
+    function setHalfVolume3(){
+        vid3.volume-=.1;
+     }
+     function setFullVolume3(){
+        vid3.volume+=.1;
+     }
+     function setPlay3(){
+
+        var image=document.getElementById('Image3');
+         if (vid3.paused==true){
+             vid3.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid3.pause();
+             image.src="volume-knob-play.png";
+         }
+
+     }
+     function setPause3(){vid3.pause();}
+     function setHalfVolume4(){vid4.volume-=.1;}
+     function setFullVolume4(){vid4.volume+=.1;}
+     function setPlay4(){                    var image=document.getElementById('Image4');
+         if (vid4.paused==true){
+             vid4.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid4.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause4(){vid4.pause();}
+     function setHalfVolume5(){vid5.volume-=.1;}
+     function setFullVolume5(){vid5.volume+=.1;}
+     function setPlay5(){                    var image=document.getElementById('Image5');
+         if (vid5.paused==true){
+             vid5.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid5.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause5(){vid5.pause();}
+     function setHalfVolume6(){vid6.volume-=.1;}
+     function setFullVolume6(){vid6.volume+=.1;}
+     function setPlay6(){                    var image=document.getElementById('Image6');
+         if (vid6.paused==true){
+             vid6.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid6.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause6(){vid6.pause();}
+     function setHalfVolume7(){vid7.volume-=.1;}
+     function setFullVolume7(){vid7.volume+=.1;}
+     function setPlay7(){                    var image=document.getElementById('Image7');
+         if (vid7.paused==true){
+             vid7.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid7.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause7(){vid7.pause();}
+     function setHalfVolume8(){vid8.volume-=.1;}
+     function setFullVolume8(){vid8.volume+=.1;}
+     function setPlay8(){                    var image=document.getElementById('Image8');
+         if (vid8.paused==true){
+             vid8.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid8.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause8(){vid8.pause();}
+     function setHalfVolume9(){vid9.volume-=.1;}
+     function setFullVolume9(){vid9.volume+=.1;}
+     function setPlay9(){                    var image=document.getElementById('Image9');
+         if (vid9.paused==true){
+             vid9.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid9.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause9(){vid9.pause();}
+     function setHalfVolume10(){vid10.volume-=.1;}
+     function setFullVolume10(){vid10.volume+=.1;}
+     function setPlay10(){                    var image=document.getElementById('Image10');
+         if (vid10.paused==true){
+             vid10.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid10.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause10(){vid10.pause();}
+
+</script>    
 <script type="text/javascript">
 
 if (!String.prototype.startsWith) {
