@@ -14,14 +14,19 @@ Browse the single ``index.html`` page using a modern browser.
 * A markdown text-editor with syntax highlighting, preview, and a minimalistic styling toolbar,
 * The text is autosaved every 500ms and stored in the localStorage container,
 * You have many sounds available if you want to build a cool ambiance while you're writing (fireplace, wind in the leaves, seashore...),
-* Store and load files using the localStorage database,
-* Download the markdown file to your disk using the download icon.
+* Store and load files using the localStorage database, UPDATE****: you can now save files to your cp
+* Download the markdown file to your disk using the download icon.,
+* UPDATE***: you can now edit the individual volume of each sound to set the perfect ambiance of your work environment. got rid of the icons for sounds cause they were hard to see,
+* UPDATE***: you can now change the color of the background. Research has shown that certain colors can effect productivity differently. The backgroud of the editor also changes along with the background of the page,
+
+
+
 
 ### Missing features
 
 (a.k.a. TODOs)
-
-* You can't adjust the sound level on the interface. The volume is set in the code. You can change it manually by editing the volume percentage *in the source code* and reload the page.
+* UPDATE***: Need server to upload files from cp. Will require moving page away from github pages
+* UPDATE***: switch to using slider controls for volume control instead of buttons 
 * Should I put some LESS for the CSS customization? I'm not sure. Maybe. Help me out if you can.
 
 ### Hacking on features
