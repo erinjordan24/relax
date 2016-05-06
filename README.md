@@ -105,7 +105,7 @@ This project uses:
 * [oceanwavescrushing.wav](http://www.freesound.org/people/Luftrum/sounds/48412/) by Luftrum - CC-BY,
 * [fireplace](http://www.freesound.org/people/martats/sounds/138018/) by martats - CC-0,
 * [131024_brook_black_forest.wav](http://www.freesound.org/people/reinsamba/sounds/204195/) by reinsamba - CC-BY,
-* UPDATE***: [Harry poter theme](https://www.youtube.com/watch?v=Htaj3o3JD8I) via youtube.... please don't tell on us :(
+* UPDATE***: [Harry Potter theme](https://www.youtube.com/watch?v=Htaj3o3JD8I) via youtube.... please don't tell on us :(
 
 All these sounds were suggested by [Jean-Michel Armand](https://github.com/mrjmad).
 
