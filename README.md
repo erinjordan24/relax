@@ -1,10 +1,10 @@
-# Relax: UPDATED by Erin Jordan
+# Relax: UPDATED by Shane Demskie
 
 Relax is a Free (as in speech and beer) clone of [Noisli](http://noisli.com).
 
 To use it, you have several options:
 
-* Go to [the associated Github page](http://brunobord.github.io/relax/) for this project.
+* Go to [the associated Github page](https://github.com/demsks/relax) for this project.
 * put these files and static resources somewhere on a web server. It can be local or remote.
 
 Browse the single ``index.html`` page using a modern browser.
@@ -28,7 +28,7 @@ Browse the single ``index.html`` page using a modern browser.
 * UPDATE***: Need server to upload files from cp. Will require moving page away from github pages
 * UPDATE***: switch to using slider controls for volume control instead of buttons 
 * UPDATE***: Make the button play and stop sign work in chrome...
-* Should I put some LESS for the CSS customization? I'm not sure. Maybe. Help me out if you can.
+* Add LESS for the CSS customization? Maybe. 
 
 ### Hacking on features
 
@@ -51,18 +51,6 @@ make minify_js
 make minify_css
 ```
 
-## Why this project?
-
-Let me be as clear as possible: Noisli is an absolutely great concept, and it's carefully designed and suits many people's needs. But a few things were annoying me in Noisli:
-
-* You can only have one document handled by the editor, no "save for later use",
-* No syntax highlighting,
-* What's the point in the smoothly-changing background color? At some point, it's unreadable and unusable (white on yellow, really?),
-* White noise? Pink noise? Brown noise? Really?
-* Preview view is not different enough from the editor for my tastes. I needed a "closer-to-the-html" preview (sans-serif fonts, for example).
-* You can't use it if you're not connected to the Internet. If only I could have a copy of Noisli for local / offline use, that'd be great.
-
-All these (minor) glitches have led me to grab my favorite text editor and build my custom clone of Noisli.
 
 ## Note on privacy
 
@@ -105,9 +93,7 @@ This project uses:
 * [oceanwavescrushing.wav](http://www.freesound.org/people/Luftrum/sounds/48412/) by Luftrum - CC-BY,
 * [fireplace](http://www.freesound.org/people/martats/sounds/138018/) by martats - CC-0,
 * [131024_brook_black_forest.wav](http://www.freesound.org/people/reinsamba/sounds/204195/) by reinsamba - CC-BY,
-* UPDATE***: [Harry Potter theme](https://www.youtube.com/watch?v=Htaj3o3JD8I) via youtube.... please don't tell on us :(
 
-All these sounds were suggested by [Jean-Michel Armand](https://github.com/mrjmad).
 
 Apart from that, the rest of the code (HTML/CSS/JS) is mine and is published
 under the terms of the [WTFPL](http://www.wtfpl.net/).
