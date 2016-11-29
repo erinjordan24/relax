@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="static/css/fitgrd.pack.css" type="text/css">
 	<link rel="stylesheet" href="static/css/style.min.css" type="text/css">
 	<link rel="stylesheet" href="static/css/preview.min.css" type="text/css">
-	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css" type="text/css">
+    
     <style>
         #drop_zone {
             background: white;
@@ -59,94 +59,71 @@
                     <textarea placeholder="Please relax and type away..."></textarea>
                     </form>
                 </div>
-				<div id="Timer">
-<img id="stopwatch" src="stopwatch.png" /> <input type="text" id="timeLeft" data-mask="00:00" />
-</div>
             </div>
 
     <div class="fg2 sidebar">
+            
+            <!-- commented out to allow for volume buttons -->
+            <!-- <div id="soundlinks"></div> -->
+            
             <div>
-                <!-- This div allows for the volume of each sound to be customized -->
-                <div id="VolumeControls">
-					<!-- The below styles set the size of our sliders, and position them next to the play buttons -->
-                    <style>
-					
-					#timeLeft{
-						width:50px;
-						margin-top:15px;
-					}
-					
-						#stopwatch{
-							margin-left:35px;
-							height:50px;
-							width:50px;
-							cursor: pointer;
-						}
-					
-						.slider{
-							margin-left:50px;
-							margin-top:9px;
-							width:150px;
-							height:10px;
-						}
-						
-						.bt{
-							float:left;
-							position:relative;
-							width:30px;
-							height:30px;
-						}
-						
-						#VolumeControls p{
-							clear:both;
-						}
-					</style>
-					
-					
-					<!-- Changed IDs to 'Sound' to more accurately reflect element's behavior. Added a 1 to first Sound. Replaced buttons with Slider for jQueryUI -->
+                <div>
+                    
+                    <!-- This div allows for the volume of each sound to be customized -->
+                    
                     <p style="margin:2px">Fire</p>
-                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay() class="bt" id="Sound1" width ="30" height="30"/>
-					<div class="slider" id="Sound1Slider"></div>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay() class="bt" id="Image" width ="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume() class="bt" width="30" height="30"/>
   
                     <p style="margin:2px">Harry Potter</p>
-                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay2() class="bt" id="Sound2" width="30" height="30"/>
-                    <div class="slider" id="Sound2Slider"></div>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay2() class="bt" id="Image2" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume2() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume2() class="bt" width="30" height="30"/>
 
                     <p style="margin:2px">Garden</p>
-                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay3() class="bt" id="Sound3" width="30" height="30"/>
-                    <div class="slider" id="Sound3Slider"></div>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay3() class="bt" id="Image3" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume3() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume3() class="bt" width="30" height="30"/>
  
                     <p style="margin:2px">Rain</p>
-                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay4() class="bt" id="Sound4" width="30" height="30"/>
-                    <div class="slider" id="Sound4Slider"></div>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay4() class="bt" id="Image4" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume4() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume4() class="bt" width="30" height="30"/>
 
                     <p style="margin:2px">Seaside</p>
-                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay5() class="bt" id="Sound5" width="30" height="30"/>
-                    <div class="slider" id="Sound5Slider"></div>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay5() class="bt" id="Image5" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume5() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume5() class="bt" width="30" height="30"/>
 
                     <p style="margin:2px">Storm</p>
-                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay6() class="bt" id="Sound6" width="30" height="30"/>
-                    <div class="slider" id="Sound6Slider"></div>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay6() class="bt" id="Image6" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume6() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume6() class="bt" width="30" height="30"/>
 
                     <p style="margin:2px">Storm and Rain</p>
-                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay7() class="bt" id="Sound7" width="30" height="30"/>
-                    <div class="slider" id="Sound7Slider"></div>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay7() class="bt" id="Image7" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume7() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume7() class="bt" width="30" height="30"/>
 
                     <p style="margin:2px">Summer Night</p>
-                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay8() class="bt" id="Sound8" width="30" height="30"/>
-                    <div class="slider" id="Sound8Slider"></div>
-					
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay8() class="bt" id="Image8" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume8() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume8() class="bt" width="30" height="30"/>
+
                     <p style="margin:2px">Water Stream</p>
-                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay9() class="bt" id="Sound9" width="30" height="30"/>
-                    <div class="slider" id="Sound9Slider"></div>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay9() class="bt" id="Image9" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume9() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume9() class="bt" width="30" height="30"/>
 
                     <p style="margin:2px">Wind</p>
-                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay10() class="bt" id="Sound10" width="30" height="30"/>
-                    <div class="slider" id="Sound10Slider"></div>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay10() class="bt" id="Image10" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume10() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume10() class="bt" width="30" height="30"/>
             </div>
                 
             <div id="audio_player">
-                <audio id="myVideo1" loop>
+                <audio id="myVideo" loop>
                 <!-- width="320" height="176" controls loop>  -->
                 	 <source src="fire.mp3" type="audio/mp3">
                 <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
@@ -210,8 +187,6 @@
 
             </div>
 
-			<!-- Added additional space to compensate for volume bars -->
-			<br/>
 			<hr>
             
             <!-- Toolbar -->
@@ -254,10 +229,7 @@
 			</div>
 
 			<hr>
-			<small class="notes">		<!-- Changed the info to include my name and github repo-->
-			 Version 3.0 made by <b>Shane Demskie</b> in 2016. Grab the source code for Version 3.0  <a href="https://github.com/demsks/relax">here</a>. <br><br>
-			 Original made by Bruno Bord in 2014. Grab the source code for the original <a href="https://github.com/brunobord/relax">here</a>. <br><br>
-			 This project was inspired by the fantastic concept of <a href="http://noisli.com">Noisli.com</a></small>
+			<small class="notes">made with love by <a href="http://jehaisleprintemps.net">Bruno Bord</a> - &copy; 2014. Grab <a href="https://github.com/brunobord/relax">the source on Github</a>, inspired by the fantastic concept of <a href="http://noisli.com">Noisli.com</a></small>
 		</div>
 
 	</div>
@@ -269,16 +241,14 @@
     
  </body>
     
-<!-- Added call to Google Libraries for jQuery UI -->
+
 
 <script type="text/javascript" src="vendor/js/jquery.min.js"></script>
-<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="vendor/js/jquery.jplayer.min.js"></script>
 <script type="text/javascript" src="vendor/js/marked.min.js"></script>
 <script type="text/javascript" src="vendor/js/codemirror.min.js"></script>
 <script type="text/javascript" src="vendor/js/intro.min.js"></script>
 <script type="text/javascript" src="vendor/js/editor.min.js"></script>
-<script type="text/javascript" src="mask/jquery.mask.js"></script>
 <script src="static/js/load.min.js"></script>
 <!---/function that changes background colors-->
 <script type="text/javascript">
@@ -321,7 +291,7 @@ function changecolor()
 </script> 
 <start>
 <script>
-     var vid =document.getElementById("myVideo1");
+     var vid = document.getElementById("myVideo");
      var vid2=document.getElementById("myVideo2");
      var vid3=document.getElementById("myVideo3");
      var vid4=document.getElementById("myVideo4");
@@ -338,9 +308,15 @@ function changecolor()
          var property=document.getElementById("button1");
          property.style.backgroundColor="7FFF00"
      }
+     function setHalfVolume(){
+        vid.volume-=.1;
+     }
+     function setFullVolume(){
+        vid.volume+=.1;
+     }
      function setPlay(){
 
-         var image=document.getElementById('Sound1');
+         var image=document.getElementById('Image');
          if (vid.paused==true){
              vid.play();
              image.src="volume-knob-stop.png";
@@ -354,9 +330,15 @@ function changecolor()
      function setPause(){
         vid.pause();
      }
+    function setHalfVolume2(){
+        vid2.volume-=.1;
+     }
+     function setFullVolume2(){
+        vid2.volume+=.1;
+     }
      function setPlay2(){
 
-        var image=document.getElementById('Sound2');
+        var image=document.getElementById('Image2');
          if (vid2.paused==true){
              vid2.play();
              image.src="volume-knob-stop.png";
@@ -370,9 +352,15 @@ function changecolor()
      function setPause2(){
         vid2.pause();
      }
+    function setHalfVolume3(){
+        vid3.volume-=.1;
+     }
+     function setFullVolume3(){
+        vid3.volume+=.1;
+     }
      function setPlay3(){
 
-        var image=document.getElementById('Sound3');
+        var image=document.getElementById('Image3');
          if (vid3.paused==true){
              vid3.play();
              image.src="volume-knob-stop.png";
@@ -384,7 +372,9 @@ function changecolor()
 
      }
      function setPause3(){vid3.pause();}
-     function setPlay4(){                    var image=document.getElementById('Sound4');
+     function setHalfVolume4(){vid4.volume-=.1;}
+     function setFullVolume4(){vid4.volume+=.1;}
+     function setPlay4(){                    var image=document.getElementById('Image4');
          if (vid4.paused==true){
              vid4.play();
              image.src="volume-knob-stop.png";
@@ -394,7 +384,9 @@ function changecolor()
              image.src="volume-knob-play.png";
          }}
      function setPause4(){vid4.pause();}
-     function setPlay5(){                    var image=document.getElementById('Sound5');
+     function setHalfVolume5(){vid5.volume-=.1;}
+     function setFullVolume5(){vid5.volume+=.1;}
+     function setPlay5(){                    var image=document.getElementById('Image5');
          if (vid5.paused==true){
              vid5.play();
              image.src="volume-knob-stop.png";
@@ -404,7 +396,9 @@ function changecolor()
              image.src="volume-knob-play.png";
          }}
      function setPause5(){vid5.pause();}
-     function setPlay6(){                    var image=document.getElementById('Sound6');
+     function setHalfVolume6(){vid6.volume-=.1;}
+     function setFullVolume6(){vid6.volume+=.1;}
+     function setPlay6(){                    var image=document.getElementById('Image6');
          if (vid6.paused==true){
              vid6.play();
              image.src="volume-knob-stop.png";
@@ -414,7 +408,9 @@ function changecolor()
              image.src="volume-knob-play.png";
          }}
      function setPause6(){vid6.pause();}
-     function setPlay7(){                    var image=document.getElementById('Sound7');
+     function setHalfVolume7(){vid7.volume-=.1;}
+     function setFullVolume7(){vid7.volume+=.1;}
+     function setPlay7(){                    var image=document.getElementById('Image7');
          if (vid7.paused==true){
              vid7.play();
              image.src="volume-knob-stop.png";
@@ -424,7 +420,9 @@ function changecolor()
              image.src="volume-knob-play.png";
          }}
      function setPause7(){vid7.pause();}
-     function setPlay8(){                    var image=document.getElementById('Sound8');
+     function setHalfVolume8(){vid8.volume-=.1;}
+     function setFullVolume8(){vid8.volume+=.1;}
+     function setPlay8(){                    var image=document.getElementById('Image8');
          if (vid8.paused==true){
              vid8.play();
              image.src="volume-knob-stop.png";
@@ -434,7 +432,9 @@ function changecolor()
              image.src="volume-knob-play.png";
          }}
      function setPause8(){vid8.pause();}
-     function setPlay9(){                    var image=document.getElementById('Sound9');
+     function setHalfVolume9(){vid9.volume-=.1;}
+     function setFullVolume9(){vid9.volume+=.1;}
+     function setPlay9(){                    var image=document.getElementById('Image9');
          if (vid9.paused==true){
              vid9.play();
              image.src="volume-knob-stop.png";
@@ -444,7 +444,9 @@ function changecolor()
              image.src="volume-knob-play.png";
          }}
      function setPause9(){vid9.pause();}
-     function setPlay10(){                    var image=document.getElementById('Sound10');
+     function setHalfVolume10(){vid10.volume-=.1;}
+     function setFullVolume10(){vid10.volume+=.1;}
+     function setPlay10(){                    var image=document.getElementById('Image10');
          if (vid10.paused==true){
              vid10.play();
              image.src="volume-knob-stop.png";
@@ -609,7 +611,7 @@ function saveTextAsFile(text, filename) {
         // without actually adding it to the DOM.
         downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
     } else {
-        // Firefox 74requires the link to be added to the DOM
+        // Firefox requires the link to be added to the DOM
         // before it can be clicked.
         downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
         downloadLink.onclick = destroyClickedElement;
@@ -619,114 +621,6 @@ function saveTextAsFile(text, filename) {
 
     downloadLink.click();
 }
-
-$('#timeLeft').mask('00:00',{placeholder: "00:00"});
-$('#timeLeft').hide();
-
-$("#stopwatch").click(function(){
-	if($('#timeLeft').is(":visible")){
-	stopClock();
-	$("#timeLeft").val("00:00");
-	}else{
-	$('#timeLeft').fadeIn();
-	$('#timeLeft').focus();
-	}
-});
-
-var stopwatchTime = 0;
-var deadline = '2015-12-31';
-
-$('#timeLeft').focusout(function(){
-	var givenTime = $('#timeLeft').val();
-	if(timeToSeconds(givenTime)>0){
-		stopwatchTime = timeToSeconds(givenTime);
-		var endtime = new Date();
-		console.log(endtime);
-		endtime.setSeconds(endtime.getSeconds() + stopwatchTime);	
-		console.log(endtime);
-		deadline = endtime;
-		startClock();
-	}
-});
-
-function startClock(){
-initializeClock(deadline);
-}
-
-function stopClock(){
-clearInterval(timer);
-}
-
-function timeToSeconds(givenString){
-	var minutes = givenString.split(":")[0];
-	var seconds = givenString.split(":")[1];
-	if(seconds==null){
-		seconds = "00";
-	}
-	var extraSeconds = minutes * 60;
-	return parseInt(seconds) + parseInt(extraSeconds);
-}
-
-function secondsToTime(givenSeconds){
-var minutes = Math.floor(givenSeconds/60);
-var seconds = givenSeconds % 60;
-return minutes+":"+seconds;
-}
-
-function getTimeRemaining(endtime){
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor( (t/1000) % 60 );
-  var minutes = Math.floor( (t/1000/60) % 60 );
-  var hours = Math.floor( (t/(1000*60*60)) % 24 );
-  var days = Math.floor( t/(1000*60*60*24) );
-  
-  var remaining = Date.parse(endtime) - Date.parse(new Date());
-  console.log(remaining/1000);
-  $("#timeLeft").val(secondsToTime(remaining/1000));
-  
-  console.log({
-  'deadline': deadline,
-  'stopwatchTime': stopwatchTime,
-  'timeLeft': remaining
-  })
-  return {
-    'total': t,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
-
-var timer;
-
-function initializeClock(endtime){
-	timer = setInterval(function(){
-    var t = getTimeRemaining(endtime);
-    if(t.total<=0){
-	  alert("Times Up!");
-      clearInterval(timer);
-    }
-  },1000);
-}
-
-
-//jQuery UI call to create sliders
-$( ".slider" ).slider({
-	  //Sliders start at 100% because we start at full volume
-      value: 100,
-	  //Event for when the slider is changed. Use the ID of the slider to determine which volume to change, then change it.
-      slide: function( event, ui ) {
-		//Which sound is being changed
-        var numOfSound = $(this).attr('id').replace("Sound","").replace("Slider","")
-		//The ID of the media being changed
-		var mediaToChange = "myVideo"+numOfSound
-		//Get the media element and change its volume
-		var vid=document.getElementById(mediaToChange);
-		vid.volume=(ui.value/100)
-      }
-});
-						  
 
 });
 </script>
