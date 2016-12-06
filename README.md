@@ -25,10 +25,7 @@ Browse the single ``index.html`` page using a modern browser.
 ### Missing features
 
 (a.k.a. TODOs)
-* UPDATE***: Need server to upload files from cp. Will require moving page away from github pages
-* UPDATE***: switch to using slider controls for volume control instead of buttons 
-* UPDATE***: Make the button play and stop sign work in chrome...
-* Add LESS for the CSS customization? Maybe. 
+* UPDATE***: Need server to upload files from cp. Will require moving page away from github pages 
 
 ### Hacking on features
 
