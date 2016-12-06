@@ -1,10 +1,10 @@
-# Relax
+# Relax: UPDATED by Shane Demskie
 
 Relax is a Free (as in speech and beer) clone of [Noisli](http://noisli.com).
 
 To use it, you have several options:
 
-* Go to [the associated Github page](http://brunobord.github.io/relax/) for this project.
+* Go to [the associated Github page](https://github.com/demsks/relax) for this project.
 * put these files and static resources somewhere on a web server. It can be local or remote.
 
 Browse the single ``index.html`` page using a modern browser.
@@ -14,15 +14,18 @@ Browse the single ``index.html`` page using a modern browser.
 * A markdown text-editor with syntax highlighting, preview, and a minimalistic styling toolbar,
 * The text is autosaved every 500ms and stored in the localStorage container,
 * You have many sounds available if you want to build a cool ambiance while you're writing (fireplace, wind in the leaves, seashore...),
-* Store and load files using the localStorage database,
-* Download the markdown file to your disk using the download icon.
+* Store and load files using the localStorage database UPDATE***: Fixed functionality and organization of save file feature, 
+* Download the markdown file to your disk using the download icon.,
+* UPDATE***: you can now edit the individual volume of each sound to set the perfect ambiance of your work environment. got rid of the icons for sounds cause they were hard to see,
+* UPDATE***: you can now change the color of the background. Research has shown that certain colors can effect productivity differently. The backgroud of the editor also changes along with the background of the page,
+
+
+
 
 ### Missing features
 
 (a.k.a. TODOs)
-
-* You can't adjust the sound level on the interface. The volume is set in the code. You can change it manually by editing the volume percentage *in the source code* and reload the page.
-* Should I put some LESS for the CSS customization? I'm not sure. Maybe. Help me out if you can.
+* UPDATE***: Need server to upload files from cp. Will require moving page away from github pages 
 
 ### Hacking on features
 
@@ -45,18 +48,6 @@ make minify_js
 make minify_css
 ```
 
-## Why this project?
-
-Let me be as clear as possible: Noisli is an absolutely great concept, and it's carefully designed and suits many people's needs. But a few things were annoying me in Noisli:
-
-* You can only have one document handled by the editor, no "save for later use",
-* No syntax highlighting,
-* What's the point in the smoothly-changing background color? At some point, it's unreadable and unusable (white on yellow, really?),
-* White noise? Pink noise? Brown noise? Really?
-* Preview view is not different enough from the editor for my tastes. I needed a "closer-to-the-html" preview (sans-serif fonts, for example).
-* You can't use it if you're not connected to the Internet. If only I could have a copy of Noisli for local / offline use, that'd be great.
-
-All these (minor) glitches have led me to grab my favorite text editor and build my custom clone of Noisli.
 
 ## Note on privacy
 
@@ -100,7 +91,6 @@ This project uses:
 * [fireplace](http://www.freesound.org/people/martats/sounds/138018/) by martats - CC-0,
 * [131024_brook_black_forest.wav](http://www.freesound.org/people/reinsamba/sounds/204195/) by reinsamba - CC-BY,
 
-All these sounds were suggested by [Jean-Michel Armand](https://github.com/mrjmad).
 
 Apart from that, the rest of the code (HTML/CSS/JS) is mine and is published
 under the terms of the [WTFPL](http://www.wtfpl.net/).

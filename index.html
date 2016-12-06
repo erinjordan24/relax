@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-	<link rel="stylesheet" href="vendor/css/grid.min.css" type-"text/css">
+	<link rel="stylesheet" href="vendor/css/grid.min.css" type="text/css">
 	<link rel="stylesheet" href="vendor/css/meteo/stylesheet.min.css" type="text/css">
 	<link rel="stylesheet" href="vendor/css/fontello/fontello.min.css" type="text/css">
 	<link rel="stylesheet" href="vendor/css/glyphicons.min.css" type="text/css">
@@ -16,59 +16,446 @@
 	<link rel="stylesheet" href="static/css/fitgrd.pack.css" type="text/css">
 	<link rel="stylesheet" href="static/css/style.min.css" type="text/css">
 	<link rel="stylesheet" href="static/css/preview.min.css" type="text/css">
+	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css" type="text/css">
+    <style>
+        #drop_zone {
+            background: white;
+            opacity: 0.7;
+            color: dimgrey;
+            min-height: auto;
+            width: auto;
+            border: 0.5px solid white;
+            margin: auto;
+            padding: auto;
+            text-align: center;
+        }
+    </style>
 </head>
+    
+    
 <body>
+<!--- where background colors are displayed-->
 <div class="wrapper">
 
-<header>
-	<div class="center">
-		<div class="row">
-			<div class="fg12 title-container">
-				<h1>Relax...</h1>
-			</div>
-		</div>
-	</div>
-</header>
+    <header>
+        <div class="center">
+            <div class="row">
+                <div class="fg12 title-container">
+                    <h1>Relax...</h1>
+                </div>
+            </div>
+        </div>
+    </header>
 
 <section>
+    
 	<div class="center">
-	<div class="row">
+        
+	   <div class="row">
 
-		<div class="fg10">
-			<div class="editor-wrapper">
-				<form action="" id="editor">
-				<textarea placeholder="Please relax and type away..."></textarea>
-				</form>
-			</div>
-		</div>
+            <div class="fg10">
+                <div class="editor-wrapper">
+                    <form action="" id="editor">
+                    <textarea placeholder="Please relax and type away..."></textarea>
+                    </form>
+                </div>
+				<div id="Timer">
+<img id="stopwatch" src="stopwatch.png" /> <input type="text" id="timeLeft" data-mask="00:00" />
+</div>
+            </div>
 
-		<div class="fg2 sidebar">
-			<div id="soundlinks"></div>
+    <div class="fg2 sidebar">
+            <div>
+                <!-- This div allows for the volume of each sound to be customized -->
+                <div id="VolumeControls">
+					<!-- The below styles set the size of our sliders, and position them next to the play buttons -->
+                    <style>
+					
+					#timeLeft{
+						width:50px;
+						margin-top:15px;
+					}
+					
+						#stopwatch{
+							margin-left:35px;
+							height:50px;
+							width:50px;
+							cursor: pointer;
+						}
+					
+						.slider{
+							margin-left:50px;
+							margin-top:9px;
+							width:150px;
+							height:10px;
+						}
+						
+						.bt{
+							float:left;
+							position:relative;
+							width:30px;
+							height:30px;
+						}
+						
+						#VolumeControls p{
+							clear:both;
+						}
+					</style>
+					
+					
+					<!-- Changed IDs to 'Sound' to more accurately reflect element's behavior. Added a 1 to first Sound. Replaced buttons with Slider for jQueryUI -->
+                    <p style="margin:2px">Fire</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay() class="bt" id="Sound1" width ="30" height="30"/>
+					<div class="slider" id="Sound1Slider"></div>
+  
+                    <p style="margin:2px">Harry Potter</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay2() class="bt" id="Sound2" width="30" height="30"/>
+                    <div class="slider" id="Sound2Slider"></div>
+
+                    <p style="margin:2px">Garden</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay3() class="bt" id="Sound3" width="30" height="30"/>
+                    <div class="slider" id="Sound3Slider"></div>
+ 
+                    <p style="margin:2px">Rain</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay4() class="bt" id="Sound4" width="30" height="30"/>
+                    <div class="slider" id="Sound4Slider"></div>
+
+                    <p style="margin:2px">Seaside</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay5() class="bt" id="Sound5" width="30" height="30"/>
+                    <div class="slider" id="Sound5Slider"></div>
+
+                    <p style="margin:2px">Storm</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay6() class="bt" id="Sound6" width="30" height="30"/>
+                    <div class="slider" id="Sound6Slider"></div>
+
+                    <p style="margin:2px">Storm and Rain</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay7() class="bt" id="Sound7" width="30" height="30"/>
+                    <div class="slider" id="Sound7Slider"></div>
+
+                    <p style="margin:2px">Summer Night</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay8() class="bt" id="Sound8" width="30" height="30"/>
+                    <div class="slider" id="Sound8Slider"></div>
+					
+                    <p style="margin:2px">Water Stream</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay9() class="bt" id="Sound9" width="30" height="30"/>
+                    <div class="slider" id="Sound9Slider"></div>
+
+                    <p style="margin:2px">Wind</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay10() class="bt" id="Sound10" width="30" height="30"/>
+                    <div class="slider" id="Sound10Slider"></div>
+            </div>
+                
+            <div id="audio_player">
+                <audio id="myVideo1" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="fire.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo2" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="Harry Potter Theme Song.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo3" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/garden.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo4" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/rain.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo5" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/seaside.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo6" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/storm.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo7" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/storm-with-rain.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo8" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/summer-night.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo9" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/water-stream.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo10" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/wind.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                </div>
+
+            </div>
+
+			<!-- Added additional space to compensate for volume bars -->
+			<br/>
 			<hr>
+            
+            <!-- Toolbar -->
 			<div class="toolbar">
 				<p id="btn-save-wrapper"><a id="btn-save" href="#"><i class="glyphicon glyphicon-save"></i> Save as...</a></p>
+                <p id="document-list"></p>
 				<hr>
-				<p><i class="glyphicon glyphicon-open"></i> Open</p>
-				<p id="document-list"></p>
+				<p><i class="glyphicon glyphicon-open"></i> Upload</p>
+                <p id="document-list2"></p>
+                
+                <div class="drop_class">
+                    <div id="drop_zone">Drop files here.</div>
+                    <output id="file_list2">
+                    
+                    </output>
+                </div>
+                
+            
+                <!-- Add a feature to change the background colors -->
+                <div class="center">  
+    
+                    <!---/drop down menu for possible background colors-->
+                    <form name="myform">
+                        <select name = "list" onclick="changecolor()" >
+            
+                    <option value = "lightblue"> Focus Blue </option>
+                    <option value = "#ffe44d"> Creative Yellow </option>
+                    <option value = "#ff3333"> Passion Red </option>
+                    <option value = "#66ff33"> Go Green </option>
+                    <option value = "gradient"> Ocean Blue </option>
+                    <option value = "gradient2"> Zen Green </option>
+                    <option value = "gradient3"> Candy Red </option>
+                    <option value = "gradient4"> Thoughtful Grey </option>
+            
+                        </select>
+                    </form>
+                </div>
+                
+				
 			</div>
+
 			<hr>
-			<small class="notes">made with love by <a href="http://jehaisleprintemps.net">Bruno Bord</a> - &copy; 2014. Grab <a href="https://github.com/brunobord/relax">the source on Github</a>, inspired by the fantastic concept of <a href="http://noisli.com">Noisli.com</a></small>
+			<small class="notes">		<!-- Changed the info to include my name and github repo-->
+			 Version 3.0 made by <b>Shane Demskie</b> in 2016. Grab the source code for Version 3.0  <a href="https://github.com/demsks/relax">here</a>. <br><br>
+			 Original made by Bruno Bord in 2014. Grab the source code for the original <a href="https://github.com/brunobord/relax">here</a>. <br><br>
+			 This project was inspired by the fantastic concept of <a href="http://noisli.com">Noisli.com</a></small>
 		</div>
 
 	</div>
+        
 	</div>
 </section>
 
 </div> <!-- /wrapper -->
-
+    
+ </body>
+    
+<!-- Added call to Google Libraries for jQuery UI -->
 
 <script type="text/javascript" src="vendor/js/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="vendor/js/jquery.jplayer.min.js"></script>
 <script type="text/javascript" src="vendor/js/marked.min.js"></script>
 <script type="text/javascript" src="vendor/js/codemirror.min.js"></script>
 <script type="text/javascript" src="vendor/js/intro.min.js"></script>
 <script type="text/javascript" src="vendor/js/editor.min.js"></script>
+<script type="text/javascript" src="mask/jquery.mask.js"></script>
 <script src="static/js/load.min.js"></script>
+<!---/function that changes background colors-->
+<script type="text/javascript">
+function changecolor()
+{
+    var clr = document.myform.list.value;
+    
+    if (clr === "gradient") {
+        // change the background color to Ocean Blue
+        
+        document.body.style.background =
+		"-webkit-linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), -webkit-linear-gradient(315deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), -webkit-linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), -webkit-linear-gradient(135deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
+        document.body.style.background = "linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), linear-gradient(135deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), linear-gradient(315deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
+        
+    } else if (clr === "gradient2") {
+        // change the background color to Zen Green 
+        
+        document.body.style.background = "-webkit-linear-gradient(45deg, hsla(72, 96%, 42%, 1) 0%, hsla(72, 96%, 42%, 0) 70%), -webkit-linear-gradient(315deg, hsla(134, 87%, 41%, 1) 10%, hsla(134, 87%, 41%, 0) 80%), -webkit-linear-gradient(225deg, hsla(148, 100%, 35%, 1) 10%, hsla(148, 100%, 35%, 0) 80%), -webkit-linear-gradient(135deg, hsla(158, 96%, 41%, 1) 100%, hsla(158, 96%, 41%, 0) 70%)";
+        document.body.style.background = "linear-gradient(45deg, hsla(72, 96%, 42%, 1) 0%, hsla(72, 96%, 42%, 0) 70%), linear-gradient(135deg, hsla(134, 87%, 41%, 1) 10%, hsla(134, 87%, 41%, 0) 80%), linear-gradient(225deg, hsla(148, 100%, 35%, 1) 10%, hsla(148, 100%, 35%, 0) 80%), linear-gradient(315deg, hsla(158, 96%, 41%, 1) 100%, hsla(158, 96%, 41%, 0) 70%)";
+        
+    } else if (clr === "gradient3") {
+        // change the background color to Candy Red
+        
+        document.body.style.background = "-webkit-linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), -webkit-linear-gradient(315deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), -webkit-linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), -webkit-linear-gradient(135deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
+	    document.body.style.background = "linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), linear-gradient(135deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), linear-gradient(315deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
+        
+    } else if (clr === "gradient4") {
+        // change the background color to Thoughtful Grey
+        
+        document.body.style.background = "-webkit-linear-gradient(45deg, hsla(209, 16%, 33%, 1) 0%, hsla(209, 16%, 33%, 0) 70%), -webkit-linear-gradient(315deg, hsla(349, 32%, 63%, 1) 10%, hsla(349, 32%, 63%, 0) 80%), -webkit-linear-gradient(225deg, hsla(222, 0%, 67%, 1) 10%, hsla(222, 0%, 67%, 0) 80%), -webkit-linear-gradient(135deg, hsla(40, 72%, 7%, 1) 100%, hsla(40, 72%, 7%, 0) 70%)";
+        document.body.style.background = "linear-gradient(45deg, hsla(209, 16%, 33%, 1) 0%, hsla(209, 16%, 33%, 0) 70%), linear-gradient(135deg, hsla(349, 32%, 63%, 1) 10%, hsla(349, 32%, 63%, 0) 80%), linear-gradient(225deg, hsla(222, 0%, 67%, 1) 10%, hsla(222, 0%, 67%, 0) 80%), linear-gradient(315deg, hsla(40, 72%, 7%, 1) 100%, hsla(40, 72%, 7%, 0) 70%)";
+        
+    } else {
+        // Focus Blue, Creative Yellow, Passion Red, or Go Green
+        
+        document.body.style.background = clr;
+    }
+
+}
+</script> 
+<start>
+<script>
+     var vid =document.getElementById("myVideo1");
+     var vid2=document.getElementById("myVideo2");
+     var vid3=document.getElementById("myVideo3");
+     var vid4=document.getElementById("myVideo4");
+     var vid5=document.getElementById("myVideo5");
+     var vid6=document.getElementById("myVideo6");
+     var vid7=document.getElementById("myVideo7");
+     var vid8=document.getElementById("myVideo8");
+     var vid9=document.getElementById("myVideo9");
+     var vid10=document.getElementById("myVideo10");
+     function setVolume(){
+        vid.volume=seekslider.volume/100;
+     }
+     function setColor(btn){
+         var property=document.getElementById("button1");
+         property.style.backgroundColor="7FFF00"
+     }
+     function setPlay(){
+
+         var image=document.getElementById('Sound1');
+         if (vid.paused==true){
+             vid.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid.pause();
+             image.src="volume-knob-play.png";
+         }
+
+     }
+     function setPause(){
+        vid.pause();
+     }
+     function setPlay2(){
+
+        var image=document.getElementById('Sound2');
+         if (vid2.paused==true){
+             vid2.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid2.pause();
+             image.src="volume-knob-play.png";
+         }
+
+     }
+     function setPause2(){
+        vid2.pause();
+     }
+     function setPlay3(){
+
+        var image=document.getElementById('Sound3');
+         if (vid3.paused==true){
+             vid3.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid3.pause();
+             image.src="volume-knob-play.png";
+         }
+
+     }
+     function setPause3(){vid3.pause();}
+     function setPlay4(){                    var image=document.getElementById('Sound4');
+         if (vid4.paused==true){
+             vid4.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid4.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause4(){vid4.pause();}
+     function setPlay5(){                    var image=document.getElementById('Sound5');
+         if (vid5.paused==true){
+             vid5.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid5.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause5(){vid5.pause();}
+     function setPlay6(){                    var image=document.getElementById('Sound6');
+         if (vid6.paused==true){
+             vid6.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid6.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause6(){vid6.pause();}
+     function setPlay7(){                    var image=document.getElementById('Sound7');
+         if (vid7.paused==true){
+             vid7.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid7.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause7(){vid7.pause();}
+     function setPlay8(){                    var image=document.getElementById('Sound8');
+         if (vid8.paused==true){
+             vid8.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid8.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause8(){vid8.pause();}
+     function setPlay9(){                    var image=document.getElementById('Sound9');
+         if (vid9.paused==true){
+             vid9.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid9.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause9(){vid9.pause();}
+     function setPlay10(){                    var image=document.getElementById('Sound10');
+         if (vid10.paused==true){
+             vid10.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid10.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause10(){vid10.pause();}
+
+</script>    
 <script type="text/javascript">
 
 if (!String.prototype.startsWith) {
@@ -102,9 +489,8 @@ $(document).ready(function() {
 		myEditor.element.value = myEditor.codemirror.getValue();
 		localStorage[prefix] = myEditor.element.value;
 	}, 500);
-
-
-	function loadDocuments() {
+    
+    function loadDocuments() {
 		// clear the list
 		$('#document-list').html('');
 		// load from localStorage
@@ -157,6 +543,34 @@ $(document).ready(function() {
 	})
 
 	}
+    
+    function handleFileSelect(evt) {
+        evt.stopPropagation();
+        evt.preventDefault();
+        
+        var files = evt.dataTransfer.files;
+        
+        var output = [];
+        for (var i = 0, f; f = files[i]; ++i) {
+            localStorage[prefix+':'+name] = localStorage[prefix];
+            output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+            loadDocuments();
+        }
+        document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  function handleDragOver(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    evt.dataTransfer.dropEffect = 'copy';
+  }
+    
+  var dropZone = document.getElementById('drop_zone');
+  dropZone.addEventListener('dragover', handleDragOver, false);
+  dropZone.addEventListener('drop', handleFileSelect, false);
 
 	loadDocuments();
 
@@ -173,8 +587,11 @@ $(document).ready(function() {
 				}
 			}
 		}
-		localStorage[prefix+':'+name] = localStorage[prefix];
-		loadDocuments();
+        
+        if (name != null) {
+            var data = myEditor.codemirror.doc.getValue();
+            saveTextAsFile(data,name + ".md");
+        }
 	});
 
 function destroyClickedElement(event) {
@@ -192,7 +609,7 @@ function saveTextAsFile(text, filename) {
         // without actually adding it to the DOM.
         downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
     } else {
-        // Firefox requires the link to be added to the DOM
+        // Firefox 74requires the link to be added to the DOM
         // before it can be clicked.
         downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
         downloadLink.onclick = destroyClickedElement;
@@ -202,6 +619,114 @@ function saveTextAsFile(text, filename) {
 
     downloadLink.click();
 }
+
+$('#timeLeft').mask('00:00',{placeholder: "00:00"});
+$('#timeLeft').hide();
+
+$("#stopwatch").click(function(){
+	if($('#timeLeft').is(":visible")){
+	stopClock();
+	$("#timeLeft").val("00:00");
+	}else{
+	$('#timeLeft').fadeIn();
+	$('#timeLeft').focus();
+	}
+});
+
+var stopwatchTime = 0;
+var deadline = '2015-12-31';
+
+$('#timeLeft').focusout(function(){
+	var givenTime = $('#timeLeft').val();
+	if(timeToSeconds(givenTime)>0){
+		stopwatchTime = timeToSeconds(givenTime);
+		var endtime = new Date();
+		console.log(endtime);
+		endtime.setSeconds(endtime.getSeconds() + stopwatchTime);	
+		console.log(endtime);
+		deadline = endtime;
+		startClock();
+	}
+});
+
+function startClock(){
+initializeClock(deadline);
+}
+
+function stopClock(){
+clearInterval(timer);
+}
+
+function timeToSeconds(givenString){
+	var minutes = givenString.split(":")[0];
+	var seconds = givenString.split(":")[1];
+	if(seconds==null){
+		seconds = "00";
+	}
+	var extraSeconds = minutes * 60;
+	return parseInt(seconds) + parseInt(extraSeconds);
+}
+
+function secondsToTime(givenSeconds){
+var minutes = Math.floor(givenSeconds/60);
+var seconds = givenSeconds % 60;
+return minutes+":"+seconds;
+}
+
+function getTimeRemaining(endtime){
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor( (t/1000) % 60 );
+  var minutes = Math.floor( (t/1000/60) % 60 );
+  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+  var days = Math.floor( t/(1000*60*60*24) );
+  
+  var remaining = Date.parse(endtime) - Date.parse(new Date());
+  console.log(remaining/1000);
+  $("#timeLeft").val(secondsToTime(remaining/1000));
+  
+  console.log({
+  'deadline': deadline,
+  'stopwatchTime': stopwatchTime,
+  'timeLeft': remaining
+  })
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+var timer;
+
+function initializeClock(endtime){
+	timer = setInterval(function(){
+    var t = getTimeRemaining(endtime);
+    if(t.total<=0){
+	  alert("Times Up!");
+      clearInterval(timer);
+    }
+  },1000);
+}
+
+
+//jQuery UI call to create sliders
+$( ".slider" ).slider({
+	  //Sliders start at 100% because we start at full volume
+      value: 100,
+	  //Event for when the slider is changed. Use the ID of the slider to determine which volume to change, then change it.
+      slide: function( event, ui ) {
+		//Which sound is being changed
+        var numOfSound = $(this).attr('id').replace("Sound","").replace("Slider","")
+		//The ID of the media being changed
+		var mediaToChange = "myVideo"+numOfSound
+		//Get the media element and change its volume
+		var vid=document.getElementById(mediaToChange);
+		vid.volume=(ui.value/100)
+      }
+});
+						  
 
 });
 </script>

@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relax...</title>
+	<meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale = 1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<link rel="stylesheet" href="vendor/css/grid.min.css" type="text/css">
+	<link rel="stylesheet" href="vendor/css/meteo/stylesheet.min.css" type="text/css">
+	<link rel="stylesheet" href="vendor/css/fontello/fontello.min.css" type="text/css">
+	<link rel="stylesheet" href="vendor/css/glyphicons.min.css" type="text/css">
+	<link rel="stylesheet" href="vendor/css/editor.min.css" />
+	<link rel="stylesheet" href="static/css/fitgrd.pack.css" type="text/css">
+	<link rel="stylesheet" href="static/css/style.min.css" type="text/css">
+	<link rel="stylesheet" href="static/css/preview.min.css" type="text/css">
+    
+    <style>
+        #drop_zone {
+            background: white;
+            opacity: 0.7;
+            color: dimgrey;
+            min-height: auto;
+            width: auto;
+            border: 0.5px solid white;
+            margin: auto;
+            padding: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+    
+    
+<body>
+<!--- where background colors are displayed-->
+<div class="wrapper">
+
+    <header>
+        <div class="center">
+            <div class="row">
+                <div class="fg12 title-container">
+                    <h1>Relax...</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<section>
+    
+	<div class="center">
+        
+	   <div class="row">
+
+            <div class="fg10">
+                <div class="editor-wrapper">
+                    <form action="" id="editor">
+                    <textarea placeholder="Please relax and type away..."></textarea>
+                    </form>
+                </div>
+            </div>
+
+    <div class="fg2 sidebar">
+            
+            <!-- commented out to allow for volume buttons -->
+            <!-- <div id="soundlinks"></div> -->
+            
+            <div>
+                <div>
+                    
+                    <!-- This div allows for the volume of each sound to be customized -->
+                    
+                    <p style="margin:2px">Fire</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay() class="bt" id="Image" width ="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume() class="bt" width="30" height="30"/>
+  
+                    <p style="margin:2px">Harry Potter</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay2() class="bt" id="Image2" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume2() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume2() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Garden</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay3() class="bt" id="Image3" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume3() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume3() class="bt" width="30" height="30"/>
+ 
+                    <p style="margin:2px">Rain</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay4() class="bt" id="Image4" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume4() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume4() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Seaside</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay5() class="bt" id="Image5" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume5() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume5() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Storm</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay6() class="bt" id="Image6" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume6() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume6() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Storm and Rain</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay7() class="bt" id="Image7" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume7() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume7() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Summer Night</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay8() class="bt" id="Image8" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume8() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume8() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Water Stream</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay9() class="bt" id="Image9" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume9() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume9() class="bt" width="30" height="30"/>
+
+                    <p style="margin:2px">Wind</p>
+                    <input type="image" src="volume-knob-play.png" name="saveForm" onclick=setPlay10() class="bt" id="Image10" width="30" height="30"/>
+                    <input type="image" src="volume-knob-subtract.png" name="saveForm" onclick=setHalfVolume10() class="bt" width="30" height="30"/>
+                    <input type="image" src="volume-knob-add.png" name="saveForm" onclick=setFullVolume10() class="bt" width="30" height="30"/>
+            </div>
+                
+            <div id="audio_player">
+                <audio id="myVideo" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="fire.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo2" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="Harry Potter Theme Song.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo3" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/garden.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo4" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/rain.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo5" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/seaside.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo6" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/storm.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo7" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/storm-with-rain.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo8" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/summer-night.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo9" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/water-stream.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                <audio id="myVideo10" loop>
+                <!-- width="320" height="176" controls loop>  -->
+                	 <source src="sounds/wind.mp3" type="audio/mp3">
+                <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                Your browser does not support HTML5 video.
+                </audio>
+                </div>
+
+            </div>
+
+			<hr>
+            
+            <!-- Toolbar -->
+			<div class="toolbar">
+				<p id="btn-save-wrapper"><a id="btn-save" href="#"><i class="glyphicon glyphicon-save"></i> Save as...</a></p>
+                <p id="document-list"></p>
+				<hr>
+				<p><i class="glyphicon glyphicon-open"></i> Upload</p>
+                <p id="document-list2"></p>
+                
+                <div class="drop_class">
+                    <div id="drop_zone">Drop files here.</div>
+                    <output id="file_list2">
+                    
+                    </output>
+                </div>
+                
+            
+                <!-- Add a feature to change the background colors -->
+                <div class="center">  
+    
+                    <!---/drop down menu for possible background colors-->
+                    <form name="myform">
+                        <select name = "list" onclick="changecolor()" >
+            
+                    <option value = "lightblue"> Focus Blue </option>
+                    <option value = "#ffe44d"> Creative Yellow </option>
+                    <option value = "#ff3333"> Passion Red </option>
+                    <option value = "#66ff33"> Go Green </option>
+                    <option value = "gradient"> Ocean Blue </option>
+                    <option value = "gradient2"> Zen Green </option>
+                    <option value = "gradient3"> Candy Red </option>
+                    <option value = "gradient4"> Thoughtful Grey </option>
+            
+                        </select>
+                    </form>
+                </div>
+                
+				
+			</div>
+
+			<hr>
+			<small class="notes">made with love by <a href="http://jehaisleprintemps.net">Bruno Bord</a> - &copy; 2014. Grab <a href="https://github.com/brunobord/relax">the source on Github</a>, inspired by the fantastic concept of <a href="http://noisli.com">Noisli.com</a></small>
+		</div>
+
+	</div>
+        
+	</div>
+</section>
+
+</div> <!-- /wrapper -->
+    
+ </body>
+    
+
+
+<script type="text/javascript" src="vendor/js/jquery.min.js"></script>
+<script type="text/javascript" src="vendor/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="vendor/js/marked.min.js"></script>
+<script type="text/javascript" src="vendor/js/codemirror.min.js"></script>
+<script type="text/javascript" src="vendor/js/intro.min.js"></script>
+<script type="text/javascript" src="vendor/js/editor.min.js"></script>
+<script src="static/js/load.min.js"></script>
+<!---/function that changes background colors-->
+<script type="text/javascript">
+function changecolor()
+{
+    var clr = document.myform.list.value;
+    
+    if (clr === "gradient") {
+        // change the background color to Ocean Blue
+        
+        document.body.style.background =
+		"-webkit-linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), -webkit-linear-gradient(315deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), -webkit-linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), -webkit-linear-gradient(135deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
+        document.body.style.background = "linear-gradient(45deg, hsla(245, 77%, 64%, 1) 0%, hsla(245, 77%, 64%, 0) 70%), linear-gradient(135deg, hsla(260, 43%, 62%, 1) 10%, hsla(260, 43%, 62%, 0) 80%), linear-gradient(225deg, hsla(200, 95%, 45%, 1) 10%, hsla(200, 95%, 45%, 0) 80%), linear-gradient(315deg, hsla(106, 92%, 52%, 1) 100%, hsla(106, 92%, 52%, 0) 70%)";
+        
+    } else if (clr === "gradient2") {
+        // change the background color to Zen Green 
+        
+        document.body.style.background = "-webkit-linear-gradient(45deg, hsla(72, 96%, 42%, 1) 0%, hsla(72, 96%, 42%, 0) 70%), -webkit-linear-gradient(315deg, hsla(134, 87%, 41%, 1) 10%, hsla(134, 87%, 41%, 0) 80%), -webkit-linear-gradient(225deg, hsla(148, 100%, 35%, 1) 10%, hsla(148, 100%, 35%, 0) 80%), -webkit-linear-gradient(135deg, hsla(158, 96%, 41%, 1) 100%, hsla(158, 96%, 41%, 0) 70%)";
+        document.body.style.background = "linear-gradient(45deg, hsla(72, 96%, 42%, 1) 0%, hsla(72, 96%, 42%, 0) 70%), linear-gradient(135deg, hsla(134, 87%, 41%, 1) 10%, hsla(134, 87%, 41%, 0) 80%), linear-gradient(225deg, hsla(148, 100%, 35%, 1) 10%, hsla(148, 100%, 35%, 0) 80%), linear-gradient(315deg, hsla(158, 96%, 41%, 1) 100%, hsla(158, 96%, 41%, 0) 70%)";
+        
+    } else if (clr === "gradient3") {
+        // change the background color to Candy Red
+        
+        document.body.style.background = "-webkit-linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), -webkit-linear-gradient(315deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), -webkit-linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), -webkit-linear-gradient(135deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
+	    document.body.style.background = "linear-gradient(45deg, hsla(348, 96%, 44%, 1) 0%, hsla(348, 96%, 44%, 0) 70%), linear-gradient(135deg, hsla(40, 98%, 49%, 1) 10%, hsla(40, 98%, 49%, 0) 80%), linear-gradient(225deg, hsla(331, 97%, 44%, 1) 10%, hsla(331, 97%, 44%, 0) 80%), linear-gradient(315deg, hsla(7, 93%, 42%, 1) 100%, hsla(7, 93%, 42%, 0) 70%)";
+        
+    } else if (clr === "gradient4") {
+        // change the background color to Thoughtful Grey
+        
+        document.body.style.background = "-webkit-linear-gradient(45deg, hsla(209, 16%, 33%, 1) 0%, hsla(209, 16%, 33%, 0) 70%), -webkit-linear-gradient(315deg, hsla(349, 32%, 63%, 1) 10%, hsla(349, 32%, 63%, 0) 80%), -webkit-linear-gradient(225deg, hsla(222, 0%, 67%, 1) 10%, hsla(222, 0%, 67%, 0) 80%), -webkit-linear-gradient(135deg, hsla(40, 72%, 7%, 1) 100%, hsla(40, 72%, 7%, 0) 70%)";
+        document.body.style.background = "linear-gradient(45deg, hsla(209, 16%, 33%, 1) 0%, hsla(209, 16%, 33%, 0) 70%), linear-gradient(135deg, hsla(349, 32%, 63%, 1) 10%, hsla(349, 32%, 63%, 0) 80%), linear-gradient(225deg, hsla(222, 0%, 67%, 1) 10%, hsla(222, 0%, 67%, 0) 80%), linear-gradient(315deg, hsla(40, 72%, 7%, 1) 100%, hsla(40, 72%, 7%, 0) 70%)";
+        
+    } else {
+        // Focus Blue, Creative Yellow, Passion Red, or Go Green
+        
+        document.body.style.background = clr;
+    }
+
+}
+</script> 
+<start>
+<script>
+     var vid = document.getElementById("myVideo");
+     var vid2=document.getElementById("myVideo2");
+     var vid3=document.getElementById("myVideo3");
+     var vid4=document.getElementById("myVideo4");
+     var vid5=document.getElementById("myVideo5");
+     var vid6=document.getElementById("myVideo6");
+     var vid7=document.getElementById("myVideo7");
+     var vid8=document.getElementById("myVideo8");
+     var vid9=document.getElementById("myVideo9");
+     var vid10=document.getElementById("myVideo10");
+     function setVolume(){
+        vid.volume=seekslider.volume/100;
+     }
+     function setColor(btn){
+         var property=document.getElementById("button1");
+         property.style.backgroundColor="7FFF00"
+     }
+     function setHalfVolume(){
+        vid.volume-=.1;
+     }
+     function setFullVolume(){
+        vid.volume+=.1;
+     }
+     function setPlay(){
+
+         var image=document.getElementById('Image');
+         if (vid.paused==true){
+             vid.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid.pause();
+             image.src="volume-knob-play.png";
+         }
+
+     }
+     function setPause(){
+        vid.pause();
+     }
+    function setHalfVolume2(){
+        vid2.volume-=.1;
+     }
+     function setFullVolume2(){
+        vid2.volume+=.1;
+     }
+     function setPlay2(){
+
+        var image=document.getElementById('Image2');
+         if (vid2.paused==true){
+             vid2.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid2.pause();
+             image.src="volume-knob-play.png";
+         }
+
+     }
+     function setPause2(){
+        vid2.pause();
+     }
+    function setHalfVolume3(){
+        vid3.volume-=.1;
+     }
+     function setFullVolume3(){
+        vid3.volume+=.1;
+     }
+     function setPlay3(){
+
+        var image=document.getElementById('Image3');
+         if (vid3.paused==true){
+             vid3.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid3.pause();
+             image.src="volume-knob-play.png";
+         }
+
+     }
+     function setPause3(){vid3.pause();}
+     function setHalfVolume4(){vid4.volume-=.1;}
+     function setFullVolume4(){vid4.volume+=.1;}
+     function setPlay4(){                    var image=document.getElementById('Image4');
+         if (vid4.paused==true){
+             vid4.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid4.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause4(){vid4.pause();}
+     function setHalfVolume5(){vid5.volume-=.1;}
+     function setFullVolume5(){vid5.volume+=.1;}
+     function setPlay5(){                    var image=document.getElementById('Image5');
+         if (vid5.paused==true){
+             vid5.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid5.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause5(){vid5.pause();}
+     function setHalfVolume6(){vid6.volume-=.1;}
+     function setFullVolume6(){vid6.volume+=.1;}
+     function setPlay6(){                    var image=document.getElementById('Image6');
+         if (vid6.paused==true){
+             vid6.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid6.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause6(){vid6.pause();}
+     function setHalfVolume7(){vid7.volume-=.1;}
+     function setFullVolume7(){vid7.volume+=.1;}
+     function setPlay7(){                    var image=document.getElementById('Image7');
+         if (vid7.paused==true){
+             vid7.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid7.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause7(){vid7.pause();}
+     function setHalfVolume8(){vid8.volume-=.1;}
+     function setFullVolume8(){vid8.volume+=.1;}
+     function setPlay8(){                    var image=document.getElementById('Image8');
+         if (vid8.paused==true){
+             vid8.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid8.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause8(){vid8.pause();}
+     function setHalfVolume9(){vid9.volume-=.1;}
+     function setFullVolume9(){vid9.volume+=.1;}
+     function setPlay9(){                    var image=document.getElementById('Image9');
+         if (vid9.paused==true){
+             vid9.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid9.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause9(){vid9.pause();}
+     function setHalfVolume10(){vid10.volume-=.1;}
+     function setFullVolume10(){vid10.volume+=.1;}
+     function setPlay10(){                    var image=document.getElementById('Image10');
+         if (vid10.paused==true){
+             vid10.play();
+             image.src="volume-knob-stop.png";
+         }
+         else{
+             vid10.pause();
+             image.src="volume-knob-play.png";
+         }}
+     function setPause10(){vid10.pause();}
+
+</script>    
+<script type="text/javascript">
+
+if (!String.prototype.startsWith) {
+  Object.defineProperty(String.prototype, 'startsWith', {
+    enumerable: false,
+    configurable: false,
+    writable: false,
+    value: function (searchString, position) {
+      position = position || 0;
+      return this.indexOf(searchString, position) === position;
+    }
+  });
+}
+
+var myEditor;
+$(document).ready(function() {
+
+	var prefix = 'relax';
+
+	// Load localStorage
+	var content = '';
+	if (localStorage[prefix]) {
+		content = localStorage[prefix];
+	}
+
+	myEditor = new Editor();
+	myEditor.render();
+	myEditor.codemirror.setValue(content);
+
+	var intervalID = window.setInterval(function() {
+		myEditor.element.value = myEditor.codemirror.getValue();
+		localStorage[prefix] = myEditor.element.value;
+	}, 500);
+    
+    function loadDocuments() {
+		// clear the list
+		$('#document-list').html('');
+		// load from localStorage
+		for (var k in localStorage) {
+			if (k.startsWith(prefix+':')) {
+				var link = $('<a/>').attr({
+					'href': '#',
+					'class': 'load',
+					'data-document': k,
+				});
+				link.html(" " + k.replace(prefix+':', ''));
+				$('#document-list').append(link);
+
+				var link = $('<a/>').attr({
+					'href': '#',
+					'class': 'delete',
+					'data-document': k,
+				});
+				link.html('<i class="glyphicon glyphicon-trash"></i>');
+				$('#document-list').append(' ').append(link);
+
+				var link = $('<a/>').attr({
+					'href': '#',
+					'class': 'download',
+					'data-document': k,
+				});
+				link.html('<i class="glyphicon glyphicon-download"></i>');
+				$('#document-list').append(' ').append(link);
+
+				$('#document-list').append('<br/>');
+			}
+		};
+
+	$('.load').on('click', function() {
+		var name = $(this).data('document');
+		myEditor.codemirror.setValue(localStorage[name]);
+	});
+
+	$('.delete').on('click', function() {
+		var name = $(this).data('document');
+		localStorage.removeItem(name);
+		loadDocuments();
+	});
+
+	$('.download').on('click', function() {
+		var name = $(this).data('document');
+		var data = localStorage[name];
+        var filename = name.replace(prefix+':', '')+'.md';
+        saveTextAsFile(data, filename);
+	})
+
+	}
+    
+    function handleFileSelect(evt) {
+        evt.stopPropagation();
+        evt.preventDefault();
+        
+        var files = evt.dataTransfer.files;
+        
+        var output = [];
+        for (var i = 0, f; f = files[i]; ++i) {
+            localStorage[prefix+':'+name] = localStorage[prefix];
+            output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+            loadDocuments();
+        }
+        document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  function handleDragOver(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    evt.dataTransfer.dropEffect = 'copy';
+  }
+    
+  var dropZone = document.getElementById('drop_zone');
+  dropZone.addEventListener('dragover', handleDragOver, false);
+  dropZone.addEventListener('drop', handleFileSelect, false);
+
+	loadDocuments();
+
+	$('#btn-save').on('click', function() {
+		ok = false;
+		while (!ok) {
+			var name = prompt("File name?");
+			if (name === null) break;
+			if (localStorage[prefix+':'+name] === undefined) {
+				ok = true;
+			} else {
+				if (confirm('Are you sure you want to overwrite `'+name+'`?')) {
+					ok = true;
+				}
+			}
+		}
+        
+        if (name != null) {
+            var data = myEditor.codemirror.doc.getValue();
+            saveTextAsFile(data,name + ".md");
+        }
+	});
+
+function destroyClickedElement(event) {
+	document.body.removeChild(event.target);
+}
+
+function saveTextAsFile(text, filename) {
+    var textFileAsBlob = new Blob([text], {type:'text/plain'});
+
+    var downloadLink = document.createElement("a");
+    downloadLink.download = filename;
+    downloadLink.innerHTML = "Download File";
+    if (window.webkitURL != null) {
+        // Chrome allows the link to be clicked
+        // without actually adding it to the DOM.
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    } else {
+        // Firefox requires the link to be added to the DOM
+        // before it can be clicked.
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+    }
+
+    downloadLink.click();
+}
+
+});
+</script>
+</body>
+</html>

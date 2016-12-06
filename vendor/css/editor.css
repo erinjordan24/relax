@@ -92,6 +92,8 @@ you can use the generic selector below, but it's slower:
 
 .CodeMirror {
   height: 300px;
+  background: white;
+  opacity: 0.8;
 }
 .CodeMirror-scroll {
   /* Set scrolling behaviour here */
@@ -108,7 +110,7 @@ you can use the generic selector below, but it's slower:
 }
 
 .CodeMirror-scrollbar-filler {
-  background-color: white; /* The little square between H and V scrollbars */
+  background-color: blue; /* The little square between H and V scrollbars */
 }
 
 /* CURSOR */
